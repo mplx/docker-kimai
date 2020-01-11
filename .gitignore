@@ -1,0 +1,14 @@
+# temporary files
+*.tmp
+*.patch
+*.log*
+*.swo
+*.swp
+*.bak
+*.DS_Store
+*~
+
+# local settings or data
+/local/
+*_local.*
+
