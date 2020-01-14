@@ -65,6 +65,7 @@ function initialize() {
     installPlugin "CustomCSSBundle"
     installPlugin "ReadOnlyAccessBundle"
     installPlugin "RecalculateRatesBundle"
+    installPlugin "EmptyDescriptionCheckerBundle"
 
     if [ "$ALLOW_USER_REG" = "true" ]; then
       yq w -i config/packages/local.yaml kimai.user.registration true

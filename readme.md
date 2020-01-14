@@ -39,12 +39,13 @@ _(*) only valid on first run (fresh installation scenario)_
 
 ## Bundled Plugins
 
-| Variable                                 | Plugin                                                                      |
-| ---------------------------------------- | --------------------------------------------------------------------------- |
-| INSTALL_PLUGIN_EASYBACKUPBUNDLE          | [EasyBackupBundle](https://github.com/mxgross/EasyBackupBundle)             |
-| INSTALL_PLUGIN_CUSTOMCSSBUNDLE           | [CustomCSSBundle](https://github.com/Keleo/CustomCSSBundle)                 |
-| INSTALL_PLUGIN_READONLYACCESSBUNDLE      | [ReadOnlyAccessBundle](https://github.com/fungus75/ReadOnlyAccessBundle)    |
-| INSTALL_PLUGIN_RECALCULATERATESBUNDLE    | [RecalculateRatesBundle](https://github.com/Keleo/RecalculateRatesBundle)   |
+| Variable                                     | Plugin                                                                                                  |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| INSTALL_PLUGIN_EASYBACKUPBUNDLE              | [EasyBackupBundle](https://github.com/mxgross/EasyBackupBundle)                                         |
+| INSTALL_PLUGIN_CUSTOMCSSBUNDLE               | [CustomCSSBundle](https://github.com/Keleo/CustomCSSBundle)                                             |
+| INSTALL_PLUGIN_READONLYACCESSBUNDLE          | [ReadOnlyAccessBundle](https://github.com/fungus75/ReadOnlyAccessBundle)                                |
+| INSTALL_PLUGIN_RECALCULATERATESBUNDLE        | [RecalculateRatesBundle](https://github.com/Keleo/RecalculateRatesBundle)                               |
+| INSTALL_PLUGIN_EMPTYDESCRIPTIONCHECKERBUNDLE | [EmptyDescriptionCheckerBundle](https://gitlab.com/hmr-it/kimai2plugins/EmptyDescriptionCheckerBundle/) |
 
 - If you need to install other plugins than the ones bundled you'll need to map the `var/plugins/` outside the container (.ie. `-v plugins:/home/project/kimai2/var/plugins`).
 - The plugin will only get installed/enabled if the plugin directory currently does not exist (i.e. you mapped the plugin directory outside the container and installed it yourself).

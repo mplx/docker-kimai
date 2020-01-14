@@ -50,6 +50,9 @@ RUN set -xe && \
     git clone --depth 1 https://github.com/Keleo/RecalculateRatesBundle.git /opt/kimai2/plugins/RecalculateRatesBundle/ && \
     cd /opt/kimai2/plugins/RecalculateRatesBundle/ && \
     git checkout 12112a94965c613f65f6d1bd069dcf6f72f93a43 && \
+    git clone https://gitlab.com/hmr-it/kimai2plugins/EmptyDescriptionCheckerBundle.git  /opt/kimai2/plugins/EmptyDescriptionCheckerBundle/ && \
+    cd /opt/kimai2/plugins/EmptyDescriptionCheckerBundle/ && \
+    git checkout eb10f4ea247d05f4a97e40cf4929258f324f2c92 && \
     find /opt/kimai2/plugins/ -type d -name Tests -exec rm -rf "{}" \; || true && \
     chown -R project:project /opt/kimai2/
 
