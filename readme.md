@@ -20,7 +20,7 @@ docker run --rm --name kimai -p 8080:8080 -v data:/home/project/kimai2/var/data/
 
 ## Environment Variables
 
-| Variable           | Description                                | Sample Value                                         |
+| Variable           | Description                                | [Sample](https://github.com/mplx/docker-kimai/blob/master/kimai.env) Value |
 | ------------------ | ------------------------------------------ | ---------------------------------------------------- |
 | DATABASE_URL       | Database connection URI                    | sqlite:///%kernel.project_dir%/var/data/kimai.sqlite |
 | APP_SECRET         | Symfony application secret                 | changeme                                             |

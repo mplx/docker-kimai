@@ -7,6 +7,8 @@ ENV KIMAI="1.6.2" \
     APP_ENV=prod \
     DATABASE_URL=sqlite:///%kernel.project_dir%/var/data/kimai.sqlite
 
+LABEL maintainer="mplx <mplx+docker@donotreply.at>"
+
 EXPOSE 8080/tcp
 
 RUN set -xe && \
