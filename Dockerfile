@@ -26,7 +26,14 @@ RUN set -xe && \
     sed -i 's|;opcache.memory_consumption=128|opcache.memory_consumption=64|' /etc/php7/php.ini && \
     sed -i 's|;opcache.max_accelerated_files=10000|opcache.max_accelerated_files=1000|' /etc/php7/php.ini && \
     sed -i 's|;opcache.validate_timestamps=1|opcache.validate_timestamps=0|' /etc/php7/php.ini && \
-    sed -i 's|;opcache.interned_strings_buffer=8|opcache.interned_strings_buffer=16|' /etc/php7/php.ini
+    sed -i 's|;opcache.interned_strings_buffer=8|opcache.interned_strings_buffer=16|' /etc/php7/php.ini && \
+    echo "env[DATABASE_URL]=\$DATABASE_URL" >>/etc/php7/php-fpm.d/www.conf && \
+    echo "env[APP_SECRET]=\$APP_SECRET" >>/etc/php7/php-fpm.d/www.conf && \
+    echo "env[TRUSTED_PROXIES]=\$TRUSTED_PROXIES" >>/etc/php7/php-fpm.d/www.conf && \
+    echo "env[TRUSTED_HOSTS]=\$TRUSTED_HOSTS" >>/etc/php7/php-fpm.d/www.conf && \
+    echo "env[MAILER_FROM]=\$MAILER_FROM" >>/etc/php7/php-fpm.d/www.conf && \
+    echo "env[MAILER_URL]=\$MAILER_URL" >>/etc/php7/php-fpm.d/www.conf && \
+    echo "env[TZ]=\$TZ" >>/etc/php7/php-fpm.d/www.conf
 
 RUN set -xe && \
     git clone --depth 1 https://github.com/mxgross/EasyBackupBundle.git /opt/kimai2/plugins/EasyBackupBundle/ && \
